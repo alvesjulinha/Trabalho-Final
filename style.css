@@ -1,10 +1,47 @@
-.cabecalho{
-    text-align: center;
-    padding: 50px 20px;
+/* Definições iniciais */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: 0;
 }
 
+
+a {
+    text-decoration: none;
+}
+
+p {
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
+
+h2, h3, h4 {
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* Cabeçalho */
+
+.cabecalho {
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    background-color: #C7839E;
+    margin-bottom: 25px;
+}
+
+
 .foto-perfil {
-    width: 180px;
+    width: 150px;
     height: 220px;
     margin: 25px auto;
     overflow: hidden;
@@ -12,8 +49,250 @@
     border: 3px solid #C7839E;
 }
 
+
 .foto-perfil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.apresentacao {
+    color: white;
+}
+
+
+hr {
+    color: aliceblue;
+}
+
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+    background-color: #C7839E;
+}
+
+h4 {
+    font-size: 30px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.menu li {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.menu a {
+    color: aliceblue;
+}
+
+.apresentacao p {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* Grupos de estudo */
+
+.grupo-grade{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grupos-estudos{
+    margin: 15px;
+    padding: 10px;
+}
+
+.grupo{
+    border: #C7839E solid 2px;
+    border-radius: 20px;
+}
+
+
+/* Projetos */
+.projetos {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 15px;
+}
+
+
+.projeto h2 {
+    text-align: center;
+    justify-content: center;
+}
+
+.projeto{
+    border: solid 2px #C7839E;
+    border-radius: 15px; 
+}
+
+.projeto a{
+    justify-content: end;
+    margin: 15px;
+}
+
+.botao {
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    color: aqua;
+    background-color: #C7839E;
+    border: solid 1px tomato;
+    margin: 15px;
+}
+
+
+/* Divs tipos */
+
+
+.tipo {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 5px;
+    width: fit-content;
+    border-radius: 20px;
+    border: var(--cor-destaque) solid 1px;
+    color: var(--cor-destaque);
+    background-color: var(--cor-principal);
+}
+
+
+.etiquetas-grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Cores das tags*/
+
+.tipo-item-academico {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-pessoal {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-game {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-prototipo {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-web {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-concluido {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-arquivado {
+    --cor-principal: tomato;
+    --cor-destaque: tomato;
+}
+
+.tipo-item-em-andamento {
+    --cor-: tomato;
+    --cor-destaque: tomato;
+}
+
+/* Contatos */
+
+.redes-sociais {
+    margin: 25px;
+    padding: 10px;
+}
+
+.redes-sociais-grade{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px 5px;
+}
+
+.redes-sociais{
+    border: #C7839E 2px solid;
+    border-radius: 15px;
+    display: flex;
+    color: #C7839E;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: space-between;
+}
+
+.rede-icone{
+    font-size: 50px;    
+}
+
+/* Formulário */
+/* Medidas e imagens provisórias */
+.secao-formulario{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyJq12i-uyBuYjuPkbjLB4zJvo0iA_4Izcn8lWB8e_HA&s=10);
+    margin: 45px;
+    padding: 30px;
+    border: #C7839E solid 2px;
+    border-radius: 25px;
+    height: 500px;
+}
+
+.formulario{
+    width: 250px;
+    padding: 25px;
+    border: #C7839E solid 2px;
+    border-radius: 25px;
+}
+
+/* Rodapé */
+
+.rodape{
+    background-color: #C7839E;
+    color: aliceblue;  
+    padding: 15px;  
+}
+
+.rodape a{
+    font-size: 30px;
+    color: aliceblue;
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.redes-sociais-rodape{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

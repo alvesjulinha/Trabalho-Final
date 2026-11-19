@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,77 +11,105 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
+
 <body>
 
+
     <nav class="menu">
-        <h4>Julia Alves Barroso</h4>
+        <div class="titulo">
+            <h4>Julia Alves Barroso</h4>
+        </div>
         <ul>
-            <li><a href="index.html">Sobre</a></li>
+            <li class="ativo"><a href="index.html">Sobre</a></li>
             <li><a href="projetos.html">Projetos</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
+    <hr>
     <header class="cabecalho">
+
+
         <div class="apresentacao">
-            <p>Hello World!♡</p>
+            <p class="decoracao">Hello World!♡</p>
             <h1>Um pouco sobre mim</h1>
-            <figure class="foto-perfil">
-                <img src="/assets/imagens/teste.webp" alt="Minha imagem">
-            </figure>
         </div>
+
+
+        <div class="foto-perfil">
+            <img src="/Imagens/teste.webp" alt="Minha imagem">
+        </div>
+
     </header>
+
 
     <main class="conteudo">
 
+
         <h1>Confira minhas redes sociais</h1>
+
 
         <section class="redes-contato">
 
-            <a href="http://" target="_blank">
-                <div class="redes-sociais">
-                    <h2>GitHub</h2>
-                    <i class="fa-brands fa-github"></i>
-                </div>
-            </a>
 
-            <a href="http://" target="_blank">
-                <div class="redes-sociais">
-                    <h2>LinkedIn</h2>
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-            </a>
+            <div class="redes-sociais-grade">
+                <a href="http://" target="_blank">
+                    <div class="redes-sociais">
+                        <div class="rede-titulo"><h2>GitHub</h2></div>
+                        <div class="rede-icone"><i class="fa-brands fa-github"></i></div>
+                    </div>
+                </a>
+    
+    
+                <a href="http://" target="_blank">
+                    <div class="redes-sociais">
+                        <div class="rede-titulo"><h2>LinkedIn</h2></div>
+                        <div class="rede-icone"><i class="fa-brands fa-linkedin"></i></div>
+                    </div>
+                </a>
+    
+    
+                <a href="http://" target="_blank">
+                    <div class="redes-sociais">
+                        <div class="red-titulo"><h2>Instagram</h2></div>
+                        <div class="rede-icone"><i class="fa-brands fa-instagram"></i></div>
+                    </div>
+                </a>
+            </div>
 
-            <a href="http://" target="_blank">
-                <div class="redes-sociais">
-                    <h2>Instagram</h2>
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-            </a>
 
         </section>
 
-        <p>Alguma sugestão ou oportunidade? Fique à vontade para entrar em contato ♡</p>
 
-        <form action="#" method="post">
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+        <p>Alguma sugestão ou mensagem? Fique à vontade para entrar em contato ♡</p>
+
+
+        <section class="secao-formulario">
+            <form class="formulario" action="#" method="post">
+                <div class="campo-nome">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="campo-email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo-mensagem">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+    
+    
+                <button class="botao" type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
+
 
     <footer class="rodape">
 
+
         <h3>Me encontre em:</h3>
+
 
         <div class="redes-sociais-rodape">
             <a href="http://" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -88,10 +117,15 @@
             <a href="http://" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
 
+
         <p>&copy; 2026 Julia Alves. Todos os direitos reservados.</p>
+
 
     </footer>
 
+
 </body>
 
+
 </html>
+
