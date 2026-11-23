@@ -5,6 +5,78 @@
     box-sizing: border-box;
 }
 
+/* Paletas e fontes */
+
+:root{
+    --ameixa: #30212d;
+    --ameixa-claro: #433342;
+    --vinho: #70445c;
+    --rosa: #C7839e;
+    --rosa-claro: #e8b9ca;
+    --creme: #f5eae7;
+    --texto: #c5b5be;
+
+    --fonte-titulos: 'Arial', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --fonte-paragrafos: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Cores das tags*/
+
+.tipo-item-academico {
+    --cor-fundo-etiqueta: #244a37;
+    --cor-texto-etiqueta: #a4e2b8;
+}
+
+.tipo-item-pessoal {
+    --cor-fundo-etiqueta: #6C0B71;
+    --cor-texto-etiqueta:#6C0B71;
+}
+
+.tipo-item-game {
+    --cor-fundo-etiqueta: tomato;
+    --cor-texto-etiqueta:tomato;
+}
+
+.tipo-item-prototipo {
+    --cor-fundo-etiqueta: #293f59;
+    --cor-texto-etiqueta:#b4d4f5;
+}
+
+.tipo-item-web {
+    --cor-fundo-etiqueta: tomato;
+    --cor-texto-etiqueta:tomato;
+}
+
+.tipo-item-concluido {
+    --cor-fundo-etiqueta: #244a37;
+    --cor-texto-etiqueta:#a4e2b8;
+}
+
+.tipo-item-arquivado {
+    --cor-fundo-etiqueta: #443a44;
+    --cor-texto-etiqueta:#d2c4d1;
+}
+
+.tipo-item-em-andamento {
+    --cor-fundo-etiqueta: #59451f;
+    --cor-texto-etiqueta:#f5d58b;
+}
+
+/* Botão para modo escuro e claro */
+
+#botao-modo{
+    border: var(--rosa), solid, 2px;
+    background-color: transparent;
+    color: var(--rosa);
+    cursor: pointer;
+    border-radius: 100%;
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    /* A estilização está meio feia :( 
+       */
+}
+
 body{
     background-color: var(--ameixa);
     color: var(--texto);
@@ -61,20 +133,10 @@ h2, h3, h4 {
 
 .apresentacao {
     color: white;
+    text-align: center;
+    justify-content: center;
 }
 
-/* Paleta */
-
-:root{
-    color-scheme: dark;
-    --ameixa: #30212d;
-    --ameixa-claro: #433342;
-    --vinho: #70445c;
-    --rosa: #C7839e;
-    --rosa-claro: #e8b9ca;
-    --creme: #f5eae7;
-    --texto-secundario: #c5b5be;
-}
 
 hr {
     background-color: var(--rosa);
@@ -91,6 +153,10 @@ hr {
     text-align: center;
     color: var(--rosa);
     background-color: var(--ameixa);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;  
 }
 
 h4 {
@@ -130,24 +196,26 @@ h4 {
 
 .interesse{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     color: var(--rosa);
     border: var(--rosa) 2px solid;
     background-color: var(--ameixa-claro);
     border-radius: 25px;
     margin: 10px;
     padding: 5px;
+    /* Considerando que vou adicionar paragrafos, terei que mudar o posicionamento */
 }
 
 .interesse-icone{
     font-size: 30px;
-    padding: 15px;
+    padding-bottom: 1px;
+    padding-top: 15px;
 }
 
 .interesse-texto{
     font-size: 20px;
-    padding-right: 15px;
+    padding: 2px;
 }
 
 /* Grupos de estudo */
@@ -203,6 +271,7 @@ h4 {
     border: solid 1px var(--rosa);    
     margin: 5px;
     text-align: center;
+    cursor: pointer;
 }
 
 
@@ -233,47 +302,6 @@ h4 {
 }
 
 
-/* Cores das tags*/
-
-.tipo-item-academico {
-    --cor-fundo: #244a37;
-    --cor-texto-etiqueta:#a4e2b8;
-}
-
-.tipo-item-pessoal {
-    --cor-fundo: #6C0B71;
-    --cor-texto-etiqueta:#6C0B71;
-}
-
-.tipo-item-game {
-    --cor-fundo: tomato;
-    --cor-texto-etiqueta:tomato;
-}
-
-.tipo-item-prototipo {
-    --cor-fundo: #293f59;
-    --cor-texto-etiqueta:#b4d4f5;
-}
-
-.tipo-item-web {
-    --cor-fundo: tomato;
-    --cor-texto-etiqueta:tomato;
-}
-
-.tipo-item-concluido {
-    --cor-fundo: #244a37;
-    --cor-texto-etiqueta:#a4e2b8;
-}
-
-.tipo-item-arquivado {
-    --cor-fundo: #443a44;
-    --cor-texto-etiqueta:#d2c4d1;
-}
-
-.tipo-item-em-andamento {
-    --cor-fundo: #59451f;
-    --cor-texto-etiqueta:#f5d58b;
-}
 
 /* Contatos */
 
@@ -376,3 +404,4 @@ textarea{
     text-align: center;
 }
 
+/* Responsividade */
