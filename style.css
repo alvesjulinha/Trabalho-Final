@@ -41,13 +41,13 @@
 }
 
 .tipo-item-pessoal {
-    --cor-fundo-etiqueta: #6C0B71;
-    --cor-texto-etiqueta:#6C0B71;
+    --cor-fundo-etiqueta: #493653;
+    --cor-texto-etiqueta: #DCC8F0;
 }
 
-.tipo-item-game {
-    --cor-fundo-etiqueta: tomato;
-    --cor-texto-etiqueta:tomato;
+.tipo-item-pesquisa {
+    --cor-fundo-etiqueta: #493653;
+    --cor-texto-etiqueta:#DCC8F0;
 }
 
 .tipo-item-prototipo {
@@ -123,7 +123,6 @@
 
 body{
     background-color: var(--fundo-principal);
-    color: var(--texto);
 }
 
 a {
@@ -135,6 +134,12 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     /* trocar por variável */
     text-align: center;
+}
+
+.observacao{ 
+    color: var(--texto-secundario);
+    font-size: 15px;
+    font-style: italic;
 }
 
 
@@ -293,7 +298,7 @@ h4 {
     font-size: 15px;
     text-align: justify;
     padding: 15px;
-    padding-bottom: 8px ;
+    padding-bottom: 8px;
 }
 
 .interesses p{
@@ -321,6 +326,12 @@ h4 {
     padding: 10px;
 }
 
+.grupos-estudos p{ 
+    font-size: 15px;
+    text-align: center;
+    padding: 8px;
+}
+
 .grupo-grade{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -333,8 +344,6 @@ h4 {
     background-color: var(--fundo-card);    
     border-radius: 20px;
     overflow: hidden;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .grupo img{
@@ -345,13 +354,26 @@ h4 {
     border-radius: 15px 15px 0 0;
 }
 
-.grupo-conteudo{
+.grupo-conteudo {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grupo .tipo{
+    margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 /* Experiências */
 .experiencias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 15px;
+    margin-bottom: 40px;
     padding: 10px;
 }
 
@@ -367,7 +389,8 @@ h4 {
     background-color: var(--fundo-card);
     color: var(--champanhe);
     border: solid 2px var(--champanhe);
-    width: fit-content;
+    width: 80%;
+    text-align: center;
     font-size: 20px;
     border-radius: 25px;
     padding: 15px;
@@ -389,6 +412,13 @@ h4 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.projeto p{
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 8px;
 }
 
 .projeto img{
@@ -424,8 +454,7 @@ h4 {
 
 .tipo {
     font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* Mudar por variável */    
+    font-family: var(--fonte-paragrafos);
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
@@ -476,10 +505,11 @@ h4 {
 }
 
 /* Formulário */
-/* Medidas e imagens provisórias */
+
 .secao-formulario{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyJq12i-uyBuYjuPkbjLB4zJvo0iA_4Izcn8lWB8e_HA&s=10);
-    /* Colocar imagem que ocupe a seção sem se dividir */
+    background-image: url(/Imagens/fundo-teste.jfif);
+    background-size: cover;
+    background-position: center;    
     margin: 45px;
     padding: 30px;
     border: var(--rosa) solid 2px;
@@ -504,7 +534,6 @@ input{
     border: 1px var(--rosa) solid;
     border-radius: 5px;
     margin: 10px;
-    /* Muito grudado na borda */
 }
 
 .campo-mensagem, .campo-nome, .campo-email{
@@ -582,7 +611,6 @@ textarea{
 
 .rodape {
     background-color: var(--fundo-card);
-    color: var(--creme);
     border-top: 2px solid var(--vinho);
     padding: 25px;
     text-align: center;
@@ -593,7 +621,7 @@ textarea{
 }
 
 .rodape p {
-    color: var(--texto);
+    color: var(--texto-secundario);
     font-size: 14px;
 }
 
