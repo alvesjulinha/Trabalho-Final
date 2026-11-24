@@ -16,32 +16,44 @@
 <body>
 
 
-    <nav class="menu">
-        <div class="titulo">
+    <div class="menu">
+        <div class="menu-titulo">
             <h4>Julia Alves Barroso</h4>
         </div>
-        <ul>
-            <li><a href="index.html">Sobre</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a  class="ativo" href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+
+        <div class="menu-navegacao">
+            <nav>
+                <ul>
+                    <li><a class="ativo" href="index.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li>
+                        <button id="botao-modo" onclick="modoEscuro()"><i class="fa-solid fa-moon"></i></button>
+                        <!-- <i class="fa-solid fa-sun"></i> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <hr>
     <header class="cabecalho">
 
 
-        <div class="apresentacao">
-            <p class="decoracao">Hello World!♡</p>
-            <h1>Um pouco sobre mim</h1>
+        <div class="texto-cabecalho">
+            <div class="apresentacao">
+                <p class="decoracao">Hello World!♡</p>
+                <h1>Um pouco sobre mim</h1>
+            </div>
+            <div class="introducao">
+                <p>O que escrevo aqui?</p>
+            </div>
         </div>
-
 
         <div class="foto-perfil">
             <img src="/Imagens/teste.webp" alt="Minha imagem">
         </div>
 
     </header>
-
 
     <main class="conteudo">
 
@@ -55,23 +67,29 @@
             <div class="redes-sociais-grade">
                 <a href="http://" target="_blank">
                     <div class="redes-sociais">
-                        <div class="rede-titulo"><h2>GitHub</h2></div>
+                        <div class="rede-titulo">
+                            <h2>GitHub</h2>
+                        </div>
                         <div class="rede-icone"><i class="fa-brands fa-github"></i></div>
                     </div>
                 </a>
-    
-    
+
+
                 <a href="http://" target="_blank">
                     <div class="redes-sociais">
-                        <div class="rede-titulo"><h2>LinkedIn</h2></div>
+                        <div class="rede-titulo">
+                            <h2>LinkedIn</h2>
+                        </div>
                         <div class="rede-icone"><i class="fa-brands fa-linkedin"></i></div>
                     </div>
                 </a>
-    
-    
+
+
                 <a href="http://" target="_blank">
                     <div class="redes-sociais">
-                        <div class="rede-titulo"><h2>Instagram</h2></div>
+                        <div class="rede-titulo">
+                            <h2>Instagram</h2>
+                        </div>
                         <div class="rede-icone"><i class="fa-brands fa-instagram"></i></div>
                     </div>
                 </a>
@@ -100,8 +118,8 @@
                 <div class="campo-mensagem">
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" required></textarea>
-                </div>    
-    
+                </div>
+
                 <button class="botao" type="submit">Enviar</button>
             </form>
         </section>
@@ -131,4 +149,3 @@
 
 
 </html>
-

@@ -8,16 +8,29 @@
 /* Paletas e fontes */
 
 :root{
-    --ameixa: #30212d;
-    --ameixa-claro: #433342;
-    --vinho: #70445c;
-    --rosa: #C7839e;
-    --rosa-claro: #e8b9ca;
-    --creme: #f5eae7;
-    --texto: #c5b5be;
+    --fundo-principal: #30212D;
+    --fundo-card: #453342;
+    --vinho: #70445C;
+    --rosa: #C7839E;
+    --rosa-claro: #E8B9CA;
+    --creme: #F5EAE7;
+    --champanhe: #C9B77D;
+    --texto-secundario: #C5B5BE;
 
     --fonte-titulos: 'Arial', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --fonte-paragrafos: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.modo-claro {
+    /* Modo claro */
+    --fundo-principal: #F5EAE7;
+    --fundo-card: #FFFFFF;
+    --vinho: #70445C;
+    --rosa: #A85D7A;
+    --rosa-claro: #E8B9CA;
+    --creme: #30212D;
+    --champanhe: #B39A55;
+    --texto-secundario: #594B55;
 }
 
 /* Cores das tags*/
@@ -61,24 +74,55 @@
     --cor-fundo-etiqueta: #59451f;
     --cor-texto-etiqueta:#f5d58b;
 }
+.tipo-item-academico {
+    --cor-fundo-etiqueta: #293F59;
+    --cor-texto-etiqueta: #B4D4F5;
+}
+
+.tipo-item-pessoal {
+    --cor-fundo-etiqueta: #493653;
+    --cor-texto-etiqueta: #DCC8F0;
+}
+
+.tipo-item-game {
+    --cor-fundo-etiqueta: #51364F;
+    --cor-texto-etiqueta: #E8B9CA;
+}
+
+.tipo-item-web {
+    --cor-fundo-etiqueta: #63394F;
+    --cor-texto-etiqueta: #F0C4D5;
+}
+
+.tipo-item-prototipo {
+    --cor-fundo-etiqueta: #3B465B;
+    --cor-texto-etiqueta: #C4D5F0;
+}
 
 /* Botão para modo escuro e claro */
-
-#botao-modo{
-    border: var(--rosa), solid, 2px;
-    background-color: transparent;
-    color: var(--rosa);
+#botao-modo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--rosa);
+    border-radius: 50%;
+    background-color: var(--vinho);
+    color: var(--creme);
+    font-size: 18px;
     cursor: pointer;
-    border-radius: 100%;
-    font-size: 25px;
-    padding: 5px;
-    text-align: center;
-    /* A estilização está meio feia :( 
-       */
+    transition: 0.3s ease;
+}
+
+#botao-modo:hover {
+    background-color: var(--rosa);
+    color: var(--fundo-card);
+    transform: rotate(15deg);
 }
 
 body{
-    background-color: var(--ameixa);
+    background-color: var(--fundo-principal);
     color: var(--texto);
 }
 
@@ -87,6 +131,9 @@ a {
 }
 
 p {
+    color: var(--texto-secundario);
+    font-family: Arial, Helvetica, sans-serif;
+    /* trocar por variável */
     text-align: center;
 }
 
@@ -94,13 +141,20 @@ h1 {
     text-align: center;
     padding: 15px;
     margin: 10px;
+    color: var(--rosa-claro);
 }
 
-h2, h3, h4 {
+h2 {
     text-align: center;
     padding: 15px;
+    color: var(--rosa);
 }
 
+h3 {
+    text-align: center;
+    padding: 15px;
+    color: var(--champanhe);
+}
 
 /* Cabeçalho */
 
@@ -124,6 +178,16 @@ h2, h3, h4 {
     border: 3px solid #C7839E;
 }
 
+.texto-cabecalho{
+    display: flex;
+    flex-direction: column;
+}
+
+.introducao{
+    text-align: justify;
+    /* colocar fonte */
+}
+
 
 .foto-perfil img {
     width: 100%;
@@ -131,10 +195,12 @@ h2, h3, h4 {
     object-fit: cover;
 }
 
-.apresentacao {
-    color: white;
+.apresentacao p{
+    color: var(--creme);
     text-align: center;
     justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    /* trocar por variável */
 }
 
 
@@ -152,8 +218,7 @@ hr {
     justify-content: space-between;
     text-align: center;
     color: var(--rosa);
-    background-color: var(--ameixa);
-
+    background-color: var(--fundo-principal);
     position: sticky;
     top: 0;
     z-index: 10;  
@@ -198,9 +263,9 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--rosa);
-    border: var(--rosa) 2px solid;
-    background-color: var(--ameixa-claro);
+    color: var(--champanhe);
+    border: var(--champanhe) 2px solid;
+    background-color: var(--fundo-card);
     border-radius: 25px;
     margin: 10px;
     padding: 5px;
@@ -220,23 +285,40 @@ h4 {
 
 /* Grupos de estudo */
 
-.grupo-grade{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin: 20px;
-}
-
 .grupos-estudos{
     margin: 15px;
     padding: 10px;
 }
 
-.grupo{
-    background-color: var(--ameixa-claro);
-    border: var(--rosa) solid 2px;
-    border-radius: 20px;
+.grupo-grade{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 20px;
 }
+
+.grupo{ 
+    min-width: 0;
+    background-color: var(--fundo-card);    
+    border-radius: 20px;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.grupo img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+.grupo-conteudo{
+    padding: 20px;
+}
+
+/* Experiências */
 
 
 /* Projetos */
@@ -244,19 +326,29 @@ h4 {
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px 15px;
-}
-
-
-.projeto h2 {
-    text-align: center;
-    justify-content: center;
+    gap: 35px 25px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
 }
 
 .projeto{
-    border: solid 2px var(--rosa);
-    border-radius: 25px; 
-    background-color: var(--ameixa-claro);
+    background-color: var(--fundo-card);    
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+.projeto-conteudo{
+    padding: 20px;
 }
 
 
@@ -281,15 +373,16 @@ h4 {
 .tipo {
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    /* Mudar por variável */    
     padding: 3px;
     padding-left: 8px;
     padding-right: 8px;
     margin: 5px;
     width: fit-content;
-    border-radius: 20px;
+    border-radius: 15px;
     border: var(--cor-texto-etiqueta) solid 1px;
     color: var(--cor-texto-etiqueta);
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-fundo-etiqueta);
 }
 
 
@@ -318,7 +411,7 @@ h4 {
     border-radius: 15px;
     display: flex;
     color: var(--rosa-claro);
-    background-color: var(--ameixa-claro);
+    background-color: var(--fundo-card);
     margin: 25px;
     padding: 10px;
     padding-right: 15px;
@@ -353,7 +446,7 @@ h4 {
 }
 
 input{
-    background-color: var(--ameixa-claro);
+    background-color: var(--fundo-card);
     width: 100%;
     padding: 10px;
     border: 1px var(--rosa) solid;
@@ -372,7 +465,7 @@ input{
 }
 
 textarea{
-    background-color: var(--ameixa-claro);
+    background-color: var(--fundo-card);
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -384,18 +477,31 @@ textarea{
 
 /* Rodapé */
 
-.rodape{
-    background-color: var(--rosa);
-    color: var(--creme);  
-    padding: 15px;  
+.rodape {
+    background-color: var(--fundo-card);
+    color: var(--creme);
+    border-top: 2px solid var(--vinho);
+    padding: 25px;
+    text-align: center;
 }
 
-.rodape a{
-    font-size: 30px;
-    color: var(--creme); 
-    padding: 40px;
-    padding-top: 10px;
-    padding-bottom: 25px;
+.rodape h3 {
+    color: var(--creme);
+}
+
+.rodape p {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.rodape a {
+    font-size: 28px;
+    color: var(--rosa);
+    padding: 12px;
+}
+
+.rodape a:hover {
+    color: var(--rosa-claro);
 }
 
 .redes-sociais-rodape{
@@ -403,5 +509,3 @@ textarea{
     justify-content: center;
     text-align: center;
 }
-
-/* Responsividade */

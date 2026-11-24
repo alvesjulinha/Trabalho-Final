@@ -14,33 +14,45 @@
 
 
 <body>
-    <nav class="menu">
-        <div class="titulo">
+    <div class="menu">
+        <div class="menu-titulo">
             <h4>Julia Alves Barroso</h4>
         </div>
-        <ul>
-            <li><a href="index.html">Sobre</a></li>
-            <li><a  class="ativo" href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+
+        <div class="menu-navegacao">
+            <nav>
+                <ul>
+                    <li><a class="ativo" href="index.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li>
+                        <button id="botao-modo" onclick="modoEscuro()"><i class="fa-solid fa-moon"></i></button>
+                        <!-- <i class="fa-solid fa-sun"></i> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <hr>
     <header class="cabecalho">
 
 
-        <div class="apresentacao">
-            <p class="decoracao">Hello World!♡</p>
-            <h1>Projetos & atividades</h1>
-            <p>Um espaço para reunir projetos e ideias desenvolvidos durante meu primeiro ano da graduação</p>
+        <div class="texto-cabecalho">
+            <div class="apresentacao">
+                <p class="decoracao">Hello World!♡</p>
+                <h1>Um pouco sobre mim</h1>
+            </div>
+            <div class="introducao">
+                <p>O que escrevo aqui?</p>
+            </div>
         </div>
-
 
         <div class="foto-perfil">
             <img src="/Imagens/teste.webp" alt="Minha imagem">
         </div>
 
     </header>
-
+    
     <main class="conteudo">
 
 
@@ -51,40 +63,41 @@
         <section class="projetos">
 
             <article class="projeto">
-                <div class="projeto-imagem">
-                    <img src="" alt="">
-                </div>
-                <h2>Autores Famosos do Horror</h2>
-                <div class="etiquetas-grade">
-                    <div class="tipo tipo-item-academico">Acadêmico</div>
-                    <div class="tipo tipo-item-web">Desenvolvimento Web</div>
-                    <div class="tipo tipo-item-concluido">Concluído</div>
-                </div>
-                <p>Descrição do projeto 1.</p>
+                <img src="" alt="">
+                <div class="projeto-conteudo">
+                    <h3>Autores Famosos do Horror</h3>
+                    <div class="etiquetas-grade">
+                        <div class="tipo tipo-item-academico">Acadêmico</div>
+                        <div class="tipo tipo-item-web">Desenvolvimento Web</div>
+                        <div class="tipo tipo-item-concluido">Concluído</div>
+                    </div>
+                    <p>Descrição do projeto 1.</p>
 
-                <a class="botao" href="https://alvesjulinha.github.io/Teste-paginas/" target="_blank"> Ver projeto <i
-                        class="fa-solid fa-arrow-right"></i>
-                </a>
+                    <a class="botao" href="https://alvesjulinha.github.io/Teste-paginas/" target="_blank"> Ver projeto
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
 
             </article>
 
 
             <article class="projeto">
-                <div class="projeto-imagem">
-                    <img src="" alt="">
-                </div>
-                <h2>CineAtlas</h2>
-                <div class="etiquetas-grade">
-                    <div class="tipo tipo-item-academico">Acadêmico</div>
-                    <div class="tipo tipo-item-web">Desenvolvimento Web</div>
-                    <div class="tipo tipo-item-concluido">Concluído</div>
-                </div>
+                <img src="" alt="">
+
+                <div class="projeto-conteudo">
+                    <h3>CineAtlas</h3>
+                    <div class="etiquetas-grade">
+                        <div class="tipo tipo-item-academico">Acadêmico</div>
+                        <div class="tipo tipo-item-web">Desenvolvimento Web</div>
+                        <div class="tipo tipo-item-concluido">Concluído</div>
+                    </div>
 
 
-                <p>Descrição do projeto 2.</p>
-                <a class="botao" href="https://alvesjulinha.github.io/Atividade-3/" target="_blank"> Ver projeto <i
-                        class="fa-solid fa-arrow-right"></i>
-                </a>
+                    <p>Descrição do projeto 2.</p>
+                    <a class="botao" href="https://alvesjulinha.github.io/Atividade-3/" target="_blank"> Ver projeto <i
+                            class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </article>
 
 
@@ -92,71 +105,75 @@
 
 
             <article class="projeto">
-                <div class="projeto-imagem">
-                    <img src="" alt="">
+                <img src="" alt="">
+
+                <div class="projeto-conteudo">
+                    <h3>Bus 404</h3>
+                    <div class="etiquetas-grade">
+                        <div class="tipo tipo-item-academico">Acadêmico</div>
+                        <div class="tipo tipo-item-game">Game Design</div>
+                        <div class="tipo tipo-item-arquivado">Arquivado</div>
+                        <div class="tipo tipo-item-prototipo">Protótipo</div>
+                    </div>
+                    <p>Descrição do projeto 2.</p>
+                    <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-                <h2>Bus 404</h2>
-                <div class="etiquetas-grade">
-                    <div class="tipo tipo-item-academico">Acadêmico</div>
-                    <div class="tipo tipo-item-game">Game Design</div>
-                    <div class="tipo tipo-item-arquivado">Arquivado</div>
-                    <div class="tipo tipo-item-prototipo">Protótipo</div>
-                </div>                
-                <p>Descrição do projeto 2.</p>
-                <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </article>
 
 
             <article class="projeto">
-                <div class="projeto-imagem">
-                    <img src="" alt="">
+                <img src="" alt="">
+
+                <div class="projeto-conteudo">
+                    <h3>Biblioteca Arandu</h3>
+                    <div class="etiquetas-grade">
+                        <!-- A primeira etiqueta está com o fundo braco -->
+                        <div class="tipo tipo-item-academico">Acadêmico</div>
+                        <div class="tipo tipo-item-game">Game Design</div>
+                        <div class="tipo tipo-item-em-andamento">Em andamento</div>
+                    </div>
+
+
+                    <p>Descrição do projeto 5.</p>
+                    <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-                <h2>Biblioteca Arandu</h2>
-                <div class="etiquetas-grade">
-                    <!-- A primeira etiqueta está com o fundo braco -->
-                    <div class="tipo tipo-item-academico">Acadêmico</div>
-                    <div class="tipo tipo-item-game">Game Design</div>
-                    <div class="tipo tipo-item-em-andamento">Em andamento</div>
-                </div>
-
-
-                <p>Descrição do projeto 5.</p>
-                <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </article>
-
-
-            <article class="projeto">
-                <div class="projeto-imagem">
-                    <img src="" alt="">
-                </div>
-                <h2>Bestiário</h2>
-                <div class="etiquetas-grade">
-                    <div class="tipo tipo-item-pessoal">Pessoal</div>
-                    <div class="tipo tipo-item-web">Desenvolvimento Web</div>
-                    <div class="tipo tipo-item-arquivado">Arquivado</div>
-                </div>
-                <p>Descrição do projeto 5.</p>
-                <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
-                </a>
 
             </article>
 
 
             <article class="projeto">
-                <div class="projeto-imagem">
-                    <img src="" alt="">
+                <img src="" alt="">
+                <div class="projeto-conteudo">
+
+                    <h3>Bestiário</h3>
+                    <div class="etiquetas-grade">
+                        <div class="tipo tipo-item-pessoal">Pessoal</div>
+                        <div class="tipo tipo-item-web">Desenvolvimento Web</div>
+                        <div class="tipo tipo-item-arquivado">Arquivado</div>
+                    </div>
+                    <p>Descrição do projeto 5.</p>
+                    <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-                <h2>Lobisomem</h2>
-                <div class="etiquetas-grade">
-                    <div class="tipo tipo-item-pessoal">Pessoal</div>
-                    <div class="tipo tipo-item-game">Game Design</div>
-                    <div class="tipo tipo-item-prototipo">Protótipo</div>
+
+            </article>
+
+
+            <article class="projeto">
+                <img src="" alt="">
+                <div class="projeto-conteudo">
+
+                    <h3>Lobisomem</h3>
+                    <div class="etiquetas-grade">
+                        <div class="tipo tipo-item-pessoal">Pessoal</div>
+                        <div class="tipo tipo-item-game">Game Design</div>
+                        <div class="tipo tipo-item-prototipo">Protótipo</div>
+                    </div>
+                    <p>Descrição do projeto 5.</p>
+                    <!-- Não há link disponível -->
                 </div>
-                <p>Descrição do projeto 5.</p>
-                <!-- Não há link disponível -->
 
             </article>
 
