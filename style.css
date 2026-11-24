@@ -137,6 +137,7 @@ p {
     text-align: center;
 }
 
+
 h1 {
     text-align: center;
     padding: 15px;
@@ -146,8 +147,10 @@ h1 {
 
 h2 {
     text-align: center;
-    padding: 15px;
+    padding: 25px;
+    margin: 5px;
     color: var(--rosa);
+    font-size: 50px;
 }
 
 h3 {
@@ -195,7 +198,7 @@ h3 {
     object-fit: cover;
 }
 
-.apresentacao p{
+.decoracao p{
     color: var(--creme);
     text-align: center;
     justify-content: center;
@@ -247,16 +250,30 @@ h4 {
     color: var(--rosa);
 }
 
+.ativo a{
+    color: var(--champanhe);
+}
+
+.apresentacao{
+    margin: 10px;
+}
+
 .apresentacao p {
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
     font-size: 20px;
 }
 
+
 /* Interesses */
+.interesses{
+    padding: 10px;
+    margin: 10px;
+}
+
 .interesses-grade{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .interesse{
@@ -270,6 +287,20 @@ h4 {
     margin: 10px;
     padding: 5px;
     /* Considerando que vou adicionar paragrafos, terei que mudar o posicionamento */
+}
+
+.interesse p{
+    font-size: 15px;
+    text-align: justify;
+    padding: 15px;
+    padding-bottom: 8px ;
+}
+
+.interesses p{
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
 }
 
 .interesse-icone{
@@ -319,7 +350,28 @@ h4 {
 }
 
 /* Experiências */
+.experiencias{
+    margin: 15px;
+    padding: 10px;
+}
 
+.experiencias-grade{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    text-align: center;
+    /* As divs não centralizam */
+}
+
+.experiencia{
+    background-color: var(--fundo-card);
+    color: var(--champanhe);
+    border: solid 2px var(--champanhe);
+    width: fit-content;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 15px;
+}
 
 /* Projetos */
 .projetos {
@@ -474,6 +526,57 @@ textarea{
     margin: 10px;
     height: 200px;
 }
+
+/* Animação */
+
+.bloco-animacao{
+    margin: 20px;
+}
+
+.flores {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;   
+}
+
+.flor {
+    width: 25px;
+    color: var(--rosa-claro);
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.flor1 {
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.flor2 {
+    animation-delay: zigue-zague 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.flor3 {
+    animation: flutuar 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes flutuar {
+    /* Arrumar animação 
+    Enquanto a 1 e a 3 sobem a 2desce e vice-versa*/
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(5px, -5px);
+    }
+    50% {
+        transform: translate(0px, -10px);
+    }
+    75% {
+        transform: translate(-5px, -5px);
+    }
+}
+
 
 /* Rodapé */
 

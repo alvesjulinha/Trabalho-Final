@@ -22,7 +22,8 @@
         <div class="menu-navegacao">
             <nav>
                 <ul>
-                    <li><a class="ativo" href="index.html">Sobre</a></li>
+                    <li><a href="index.html" class="ativo">Sobre</a></li>
+                    <!-- A classe ativo não está surtindo efeito no css -->
                     <li><a href="projetos.html">Projetos</a></li>
                     <li><a href="contato.html">Contato</a></li>
                     <li>
@@ -39,12 +40,20 @@
 
         <div class="texto-cabecalho">
             <div class="apresentacao">
-                <p class="decoracao">Hello World!♡</p>
+                <p class="decoracao">Hello World!☏</p>
                 <h1>Um pouco sobre mim</h1>
             </div>
+
             <div class="introducao">
-                <p>O que escrevo aqui?</p>
+                <p>Estudante de Engenharia de Software na UniFil.</p>
             </div>
+
+            <div class="bloco-animacao">
+                <img class="flor flor1" src="/Imagens/cherry-blossom-petal-2-svgrepo-com.svg" alt="">
+                <img class="flor flor2" src="/Imagens/cherry-blossom-petal-2-svgrepo-com.svg" alt="">
+                <img class="flor flor3" src="/Imagens/cherry-blossom-petal-2-svgrepo-com.svg" alt="">
+            </div>
+
         </div>
 
         <div class="foto-perfil">
@@ -53,18 +62,13 @@
 
     </header>
 
-
     <main class="conteudo">
-        <section class="sobre">
-            <h2>Sobre Mim</h2>
-            <p></p>
-        </section>
-
 
         <section class="interesses">
             <h2>Interesses e aprendizado</h2>
 
-            <p></p>
+            <p>Alguns assuntos e atividades que gosto.</p>
+            <!-- Dá para melhorar a frase? -->
 
             <div class="interesses-grade">
 
@@ -74,7 +78,7 @@
                     </div>
                     <div class="interesse-texto">
                         <h3>Idiomas</h3>
-                        <p></p>
+                        <p>Gosto de estudar inglês e ultimamente estou tentando aprender alemão</p>
                     </div>
                 </div>
 
@@ -84,7 +88,8 @@
                     </div>
                     <div class="interesse-texto">
                         <h3>Jogos</h3>
-                        <p></p>
+                        <p>Estou aprendendo a programar em plataformas como Godot e Roblox Studio e como desenhar
+                            sprites em pixel art. </p>
                     </div>
                 </div>
 
@@ -94,19 +99,10 @@
                     </div>
                     <div class="interesse-texto">
                         <h3>Linguagens</h3>
-                        <p></p>
+                        <p>Estou aprendendo a programar usando linguagens como Lua e Cc#</p>
                     </div>
                 </div>
-
-                <div class="interesse">
-                    <div class="interesse-icone">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <div class="interesse-texto">
-                        <h3>Tecnologia</h3>
-                        <p></p>
-                    </div>
-                </div>
+            </div>
 
             </div>
         </section>
@@ -160,15 +156,13 @@
         </section>
 
 
-        <section class="esperiencias">
-            <h2>Experiências acadêmicas</h2>
-            <ul>
-                <li>Pensamento computacional</li>
-                <li>Monitoria Londriense tech e Pensamento computacional</li>
+        <section class="experiencias">
+            <h2>Experiências acadêmicas Anteriores</h2>
 
-                <li>Experiência 3</li>
-                <!-- Não sei o que colocar -->
-            </ul>
+            <div class="experiencias-grade">
+                <div class="experiencia">Pensamento computacional</div>
+                <div class="experiencia">Monitoria Londriense tech e Pensamento computacional</div>
+            </div>
         </section>
     </main>
 
