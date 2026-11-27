@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Projetos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -26,7 +26,9 @@
                     <li><a class="ativo" href="projetos.html">Projetos</a></li>
                     <li><a href="contato.html">Contato</a></li>
                     <li>
-                        <button id="botao-modo" onclick="modoEscuro()"><i class="fa-solid fa-moon"></i></button>
+                        <button id="botao-modo" type="button" aria-label="Ativar modo escuro">
+                            <i id="icone-modo" class="fa-solid fa-sun"></i>
+                        </button>
                         <!-- <i class="fa-solid fa-sun"></i> -->
                     </li>
                 </ul>
@@ -52,11 +54,11 @@
         </div>
 
     </header>
-
+    <hr>
     <main class="conteudo">
 
 
-        <h1>Meus Projetos</h1>
+        <h2>Meus Projetos</h2>
         <p>Confira alguns projetos que desenvolvi durante o curso!♡</p>
 
         <section class="projetos">
@@ -151,8 +153,6 @@
                     <p>Descrição do projeto 5.</p>
                     <a class="botao" href="#" target="_blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <!-- Os botões dessas divs precisam trocar a cor e estão sobrepondo os paragrafos -->
-                </div>
 
             </article>
 
