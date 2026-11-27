@@ -202,9 +202,11 @@ h4 {
 
 .foto-perfil {
     .foto-perfil {
-    width: 100%;
-    max-width: 340px;
-    aspect-ratio: 1;}
+        width: 100%;
+        max-width: 340px;
+        aspect-ratio: 1;
+    }
+
     height: 400px;
     margin: 0 auto;
     overflow: hidden;
@@ -213,9 +215,18 @@ h4 {
 
 /* Forma da foto */
 .foto-perfil {
-    height: 350px;
+    width: 100%;
+    max-width: 340px;
     aspect-ratio: 1;
-    clip-path: shape(from 50% 91%, line to 90% 50%, arc to 50% 9% of 1%, arc to 10% 50% of 1%);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 3px solid var(--rosa);
+
+    clip-path: shape(from 50% 91%,
+            line to 90% 50%,
+            arc to 50% 9% of 1%,
+            arc to 10% 50% of 1%);
+    /* Peguei o formato nesse link: https://css-shape.com/heart/ */
 }
 
 .foto-perfil img {
@@ -435,7 +446,7 @@ h4 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experiencia:hover{
+.experiencia:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
@@ -443,13 +454,17 @@ h4 {
 /* Projetos */
 .projetos {
     margin: 20px;
-    display: grid;    
+    display: grid;
 }
 
 .projetos-grade {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 .projeto {
@@ -459,9 +474,12 @@ h4 {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
 }
 
-.projeto:hover{
+.projeto:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
@@ -475,7 +493,7 @@ h4 {
 
 .projeto img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     display: block;
     border-radius: 15px 15px 0 0;
@@ -488,6 +506,8 @@ h4 {
 
 .projeto-conteudo {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .botao {
@@ -780,28 +800,123 @@ textarea {
 
 /* Tablets */
 @media (max-width: 1024px) {
+
+    /* Cabeçalho */
     .cabecalho {
         grid-template-columns: 1fr 0.8fr;
         gap: 20px;
     }
+
+    /* Grades */
+    .interesses-grade,
+    .grupo-grade,
+    .projetos,
+    .redes-sociais-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .experiencias-grade {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Formulário */
+    .formulario {
+        width: 80%;
     }
 }
 
 /* Celulares */
 @media (max-width: 600px) {
+
+    /* Menu */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu li {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    /* Cabeçalho */
     .cabecalho {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 25px;
+        padding: 30px 20px;
     }
+
     .texto-cabecalho {
         max-width: 100%;
     }
+
     .foto-perfil {
-        max-width: 250px;
+        max-width: 230px;
     }
-    .experiencias-grade {
+
+    /* Títulos */
+    h2 {
+        font-size: 32px;
+        padding: 15px;
+    }
+
+    /* Grades */
+    .interesses-grade,
+    .grupo-grade,
+    .projetos,
+    .experiencias-grade,
+    .redes-sociais-grade {
         grid-template-columns: 1fr;
     }
+
+    .grupo-grade,
+    .projetos {
+        margin: 10px;
+    }
+
+    /* Etiquetas */
+    .etiquetas-grade {
+        flex-wrap: wrap;
+    }
+
+    /* Redes sociais */
+    .redes-sociais {
+        margin: 10px;
+    }
+
+    .rede-icone {
+        font-size: 50px;
+    }
+
+    /* Formulário */
+    .secao-formulario {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .campo-mensagem,
+    .campo-nome,
+    .campo-email {
+        margin-right: 0;
+        padding: 5px;
+    }
+
+    input,
+    textarea {
+        margin: 5px 0;
+    }
+
 }
