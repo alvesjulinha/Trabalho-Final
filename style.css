@@ -650,7 +650,7 @@ hr {
 /* Formulário */
 
 .secao-formulario {
-    background-image: url(/Imagens/flores-rosas.jpg);
+    background-image: url(Imagens/flores-rosas.jpg);
     background-size: cover;
     background-position: center;
     margin: 45px;
@@ -729,7 +729,44 @@ textarea {
 }
 
 /* Animação */
+.flores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
 
+.flor {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+@keyframes subir {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes descer {
+    0%, 100% {
+        transform: translateY(-12px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.flor1, .flor3 {
+    animation: subir 3s ease-in-out infinite;
+}
+.flor2 {
+    animation: descer 3s ease-in-out infinite;
+}
 
 /* Rodapé */
 
@@ -888,4 +925,13 @@ textarea {
         margin: 5px 0;
     }
 
+    /* Animação */
+    .flores {
+        gap: 18px;
+    }
+
+    .flor {
+        width: 27px;
+        height: 27px;
+    }
 }
