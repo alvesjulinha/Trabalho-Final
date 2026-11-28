@@ -171,6 +171,12 @@ h3 {
     color: var(--champanhe);
 }
 
+h4 {
+    font-size: 30px;
+    padding: 15px;
+    margin: 10px;
+}
+
 h1,
 h2,
 h3,
@@ -198,19 +204,6 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.foto-perfil {
-    .foto-perfil {
-        width: 100%;
-        max-width: 340px;
-        aspect-ratio: 1;
-    }
-
-    height: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 3px solid var(--rosa);
 }
 
 /* Forma da foto */
@@ -247,7 +240,6 @@ h4 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-
 hr {
     background-color: var(--rosa);
     height: 1px;
@@ -259,9 +251,10 @@ hr {
 .menu {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    text-align: center;
+    gap: 10px 20px;
+    padding: 10px 4%;
     color: var(--rosa);
     background-color: var(--fundo-principal);
     position: sticky;
@@ -269,22 +262,19 @@ hr {
     z-index: 10;
 }
 
-h4 {
-    font-size: 30px;
-    padding: 15px;
-    margin: 10px;
-}
 
 .menu ul {
-    list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px 15px;
+    list-style: none;
 }
 
 
 .menu li {
-    padding: 25px;
+    padding: 10px;
     font-size: 20px;
 }
 
@@ -341,6 +331,12 @@ h4 {
     border-radius: 25px;
     margin: 10px;
     padding: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interesse:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .interesse p {
@@ -384,8 +380,12 @@ h4 {
 .grupo-grade {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    margin: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 25px;
+    align-items: stretch;
 }
 
 .grupo {
@@ -393,6 +393,12 @@ h4 {
     background-color: var(--fundo-card);
     border-radius: 20px;
     overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grupo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .grupo img {
@@ -422,22 +428,24 @@ h4 {
     flex-direction: column;
     align-items: center;
     margin: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     padding: 10px;
 }
 
 .experiencias-grade {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    text-align: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 25px;
+    width: 100%;
 }
 
 .experiencia {
     background-color: var(--fundo-card);
     color: var(--champanhe);
     border: solid 2px var(--champanhe);
-    width: 80%;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
     justify-content: center;
     font-size: 20px;
@@ -474,8 +482,7 @@ h4 {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    min-width: 0;
+    width: 100%;    
     height: 100%;
 }
 
@@ -598,9 +605,11 @@ h4 {
     padding: 10px;
 }
 
-
-
 /* Contatos */
+.redes-contato{
+    margin: 30px;
+    margin-bottom: 70px;
+}
 
 .redes-sociais-grade {
     margin: 0;
@@ -611,23 +620,31 @@ h4 {
 }
 
 .redes-sociais {
-    border: var(--rosa) 2px solid;
-    border-radius: 15px;
     display: flex;
-    color: var(--rosa-claro);
-    background-color: var(--fundo-card);
-    margin: 25px;
-    padding: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
+    align-items: center;
     justify-content: space-between;
+    gap: 15px;
+    min-width: 0;
+    margin: 15px;
+    padding: 20px;
+    border: solid 2px var(--rosa);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes-sociais:hover {
+    background-color: var(--rosa-claro);
+}
+
+.redes-sociais a {
+    min-width: 0;
 }
 
 .rede-icone {
-    font-size: 80px;
-    text-align: center;
-    align-items: center;
-    /* Centralizar ícones na horizontal */
+    flex-shrink: 0;
+    font-size: clamp(35px, 5vw, 65px);
+    color: var(--rosa);
 }
 
 /* Formulário */
@@ -650,16 +667,20 @@ h4 {
     border: var(--rosa) solid 2px;
     border-radius: 25px;
     height: fit-content;
-    width: 60%;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 input {
     background-color: var(--fundo-card);
     width: 100%;
+    max-width: 100%;
+    margin: 10px;
     padding: 10px;
     border: 1px var(--rosa) solid;
     border-radius: 5px;
-    margin: 10px;
 }
 
 .campo-mensagem,
@@ -676,11 +697,12 @@ input {
 textarea {
     background-color: var(--fundo-card);
     width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px var(--rosa) solid;
     border-radius: 5px;
-    margin: 10px;
     height: 200px;
 }
 
@@ -707,59 +729,6 @@ textarea {
 }
 
 /* Animação */
-
-.bloco-animacao {
-    margin: 20px;
-}
-
-.flores {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px 0;
-}
-
-.flor {
-    width: 25px;
-    color: var(--rosa-claro);
-    animation: flutuar 3s ease-in-out infinite;
-}
-
-.flor1 {
-    animation: flutuar 3s ease-in-out infinite;
-}
-
-.flor2 {
-    animation-delay: zigue-zague 3s ease-in-out infinite;
-    animation-delay: 0.5s;
-}
-
-.flor3 {
-    animation: flutuar 3s ease-in-out infinite;
-    animation-delay: 1s;
-}
-
-@keyframes flutuar {
-
-    /* Arrumar animação 
-    Enquanto a 1 e a 3 sobem a 2desce e vice-versa*/
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    25% {
-        transform: translate(5px, -5px);
-    }
-
-    50% {
-        transform: translate(0px, -10px);
-    }
-
-    75% {
-        transform: translate(-5px, -5px);
-    }
-}
 
 
 /* Rodapé */
@@ -810,7 +779,7 @@ textarea {
     /* Grades */
     .interesses-grade,
     .grupo-grade,
-    .projetos,
+    .projetos-grade,
     .redes-sociais-grade {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -872,7 +841,7 @@ textarea {
     /* Grades */
     .interesses-grade,
     .grupo-grade,
-    .projetos,
+    .projetos-grade,
     .experiencias-grade,
     .redes-sociais-grade {
         grid-template-columns: 1fr;
